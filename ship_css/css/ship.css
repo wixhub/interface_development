@@ -2,6 +2,7 @@ html {
     background-color: chocolate;
 }
 
+/* TODO: fullscreen mode */
 .canvas {
     position: relative;
     margin-top: 20px;
@@ -214,7 +215,7 @@ li a:hover {
     width: 100px;
     height: 20px;
     border-radius: 0 0 0 20px;
-    background: peru;
+    background: orange;
 }
 
 .ship_Name {
@@ -230,7 +231,7 @@ li a:hover {
 
 .ship_Name::first-letter {
     color: red;
-    font-size: 1.1em;
+    font-size: 1.2em;
     padding-left: 6px;
 }
 
