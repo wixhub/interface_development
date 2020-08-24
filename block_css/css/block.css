@@ -1,0 +1,51 @@
+.canva {
+
+    border-style: solid;
+    border-color: #111;
+    border-width: 1px;
+    width: 250px;
+    height: 300px;
+
+}
+
+.animation {
+
+    height: 150px;
+    width:150px;
+    background-color:#f00;
+    
+    /* название анимации */
+    animation-name: moveSquare; 
+    /* продолжительность анимации */
+    animation-duration: 3s;
+    /* характер движнния равномерный */
+    animation-timing-function: linear;
+    /* запускает анимацию в конце в обратную сторону */
+    animation-direction: alternate;
+    /* повторение анимации */
+    animation-iteration-count: infinite;
+
+    /* короткая запись */
+    /* animation: moveSquare 6s linear alternate infinite; */
+}
+
+@keyframes moveSquare {
+
+    0% { transform: none;}
+
+    25%{transform:translateX(100px)}
+    
+    50%{transform:translate(100px,150px);}
+    
+    75%, 100% {transform:translate(100px,150px) scale(2) rotate(145deg);}
+    
+}
+
+.animation:hover {
+    
+    background-color:#FFFF00 ;
+
+    transition: background-color 500ms linear; 
+
+}
+

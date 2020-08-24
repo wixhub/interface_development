@@ -1,0 +1,993 @@
+html {
+    background-color: chocolate;
+}
+
+.canvas {
+    position: relative;
+    margin-top: 20px;
+    width: 500px;
+    margin: auto;
+    transition: .3s ease;
+    perspective: 800px;
+}
+
+.box_front {
+    position: relative;
+    overflow: hidden;
+    width: 500px;
+    height: 380px;
+    background: skyblue;
+    box-shadow: 0 -400px 300px -300px steelblue inset;
+    animation: daySky 50s linear infinite;
+}
+
+/* MENU */
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    border-radius: 9px;
+    border: 0;
+}
+  
+li a {
+    display: block;
+    padding: 1px 5px 1px 5px;
+    margin-top: 2px;
+    color: #A62F00;
+    font-size: 80%;
+    text-decoration: none;
+    background-color: #66A3D2;
+    border-radius: 9px;
+    border: 0;
+}
+
+/* Change the link color on hover */
+li a:hover {
+    background-color: #033E6B;
+    color: white;
+}
+
+.go_MENU {
+    animation: 
+    go-DATA 2s linear forwards,
+    blink-DATA .5s linear forwards;
+}
+
+@keyframes go-DATA {
+    0%, 60% {
+        opacity: 0;
+    }
+    70%, 90% {
+        opacity: 0.5;
+    }
+    100% {
+        opacity: 0.9;
+    }
+}
+
+.cell {
+    position: relative;
+}
+
+.line1 {
+    display: inline-block;
+}
+
+.title {
+    position: relative;
+    text-align-last: center;
+    width: 350px;
+    margin: auto;
+    padding: 10px;
+    color: gold;
+    font: 2em sans-serif;
+    animation: _showTitle 3s linear 1;
+}
+
+/* animation: name duration timing-function delay iteration-count direction fill-mode; */
+
+@keyframes showTitle {
+    0%, 90% {
+        visibility: visible;
+        transform: scale(1);
+    }
+    91%, 100% {
+        opacity: 0;
+        transform: scale(0.1);
+        visibility: hidden;
+    }
+}
+
+/* Sky colors v1:
+    Day:
+        background: skyblue;
+        box-shadow: 0 -400px 300px -300px steelblue inset;
+    Evening:
+        background: darkslateblue;
+        box-shadow: 0 -400px 300px -300px orangered inset;
+    Night:
+        background: darkslateblue;
+        box-shadow: 0 -400px 300px -300px transparent inset;
+*/
+
+@keyframes daySky {
+
+    0%, 1% {
+        /* Night 2s */
+        background: darkslateblue;
+        box-shadow: 0 -400px 300px -300px transparent inset;
+    }
+    10% {
+        /* Morning 5s */
+        background: violet;
+        box-shadow: 0 -400px 300px -300px orangered inset;
+    }
+    20%, 38% {
+        /* Afternoon 20s */
+        background: skyblue;
+        box-shadow: 0 -400px 300px -300px steelblue inset;
+    }
+    48% {
+        /* Evening 5s */
+        background: teal;
+        box-shadow: 0 -400px 300px -300px orangered inset;
+    }
+    57%, 100% {
+        /* Night 18s */
+        background: darkslateblue;
+        box-shadow: 0 -400px 300px -300px transparent inset;
+    }
+}
+
+.ship::before {
+    position: absolute;
+    top: 0;
+    left: 10px;
+    width: 65px;
+    height: 16px;
+    content: '';
+    border-radius: 20px 0 0 0;
+    background: #fff;
+}
+
+.ship {
+    position: absolute;
+    right: -100px;
+    bottom: 30px;
+    width: 100px;
+    height: 36px;
+    animation: runShip 50s linear infinite;
+}
+
+@keyframes runShip {
+    0% {
+        transform: translateX(100px);
+    }
+    50% {
+        transform: translateX(-700px);
+    }
+    51% {
+        transform: translateX(-600px) rotateY(180deg);
+    }
+    100% {
+        transform: translateX(400px) rotateY(180deg);
+    }
+}
+
+.ship_smokestack {
+    position: absolute;
+    bottom: 36px;
+    left: 45px;
+    width: 10px;
+    height: 17px;
+    background: #a18e6e;
+}
+
+.ship_window {
+    position: absolute;
+    top: 6px;
+    left: 40px;
+    width: 7px;
+    height: 7px;
+    border-radius: 50%;
+    background: #a18e6e;
+    box-shadow: 13px 0 0 0 #a18e6e, -13px 0 0 0 #a18e6e;
+    animation: lichtShipWindow 50s infinite;
+}
+
+@keyframes lichtShipWindow {
+    0%, 50% {
+        background: #a18e6e;
+        box-shadow: 13px 0 0 0 #a18e6e, -13px 0 0 0 #a18e6e;
+    }
+    51%, 100% {
+        background: #ffdf05;
+        box-shadow: 13px 0px 2px 0px #ffdf05, 0px 0px 2px 0px #ffdf05, -13px 0px 2px 0px #ffdf05;
+    }
+}
+
+.ship_corpus {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100px;
+    height: 20px;
+    border-radius: 0 0 0 20px;
+    background: peru;
+}
+
+.ship_Name {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100px;
+    height: 20px;
+    font-family: "Times New Roman", Times, serif;
+    color: #fff;
+    animation: runShipName 50s linear infinite;
+}
+
+.ship_Name::first-letter {
+    color: red;
+    font-size: 1.1em;
+    padding-left: 6px;
+}
+
+@keyframes runShipName {
+    0% {
+        transform: translateX(0px) rotateY(0deg);
+    }
+    50% {
+        transform: translateX(0px) rotateY(0deg);
+    }
+    51% {
+        transform: translateX(-30px) rotateY(180deg);
+    }
+    100% {
+        transform: translateX(-30px) rotateY(180deg);
+    }
+}
+
+.ship_lifebuoy {
+    position: absolute;
+    bottom: 6px;
+    right: 10px;
+    height: 8px;
+    width: 8px;
+    border: 6px ridge red;
+    border-radius: 50%;
+}
+
+.smoke div {
+    position: absolute;
+    width: 7px;
+    height: 7px;
+    border-radius: 50%;
+    background: #fff;
+}
+
+.smoke-1 {
+    top: -25px;
+    right: 44px;
+    animation: runSmoke1 3s linear infinite;
+}
+
+@keyframes runSmoke1 {
+    0% {
+        transform: none;
+    }
+    100% {
+        opacity: 0;
+        transform: translateY(-30px) scale(2.5);
+    }
+}
+
+.smoke-2 {
+    top: -25px;
+    right: 42px;
+    animation: runSmoke2 3s linear 1s infinite;
+}
+
+@keyframes runSmoke2 {
+    0% {
+        transform: none;
+    }
+    100% {
+        opacity: 0;
+        transform: translateY(-20px) scale(2.5);
+    }
+}
+
+.smoke-3 {
+    top: -25px;
+    right: 49px;
+    animation: runSmoke3 3s linear 2s infinite;
+}
+
+@keyframes runSmoke3 {
+    0% {
+        transform: none;
+    }
+    100% {
+        opacity: 0;
+        transform: translateY(-40px) scale(2.5);
+    }
+}
+
+/* SUN */
+.sun {
+    position: absolute;
+    top: 30px;
+    right: 50%;
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    background: #ffcf11;
+    box-shadow: 0px 0px 40px 10px #ffdf05;
+    animation: sunRotate 8s linear infinite;
+}
+
+@keyframes sunRotate {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+/* sun orbit */
+.sun-wrapper {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    transform-origin: bottom center;
+    animation: sunDay 50s linear infinite;
+}
+
+@keyframes sunDay {
+    0% {
+        transform: rotate(-90deg);
+    }
+    100% {
+        transform: rotate(270deg);
+    }
+}
+
+.sun div {
+    position: absolute;
+    top: -20px;
+    left: 50%;
+    width: 2px;
+    height: 100px;
+    margin-left: -1px;
+    border: solid #ffcf11;
+    border-width: 10px 0 10px 0;
+}
+
+.sun div:nth-child(2) {
+    transform: rotate(18deg);
+}
+
+.sun div:nth-child(3) {
+    transform: rotate(36deg);
+}
+
+.sun div:nth-child(4) {
+    transform: rotate(54deg);
+}
+
+.sun div:nth-child(5) {
+    transform: rotate(72deg);
+}
+
+.sun div:nth-child(6) {
+    transform: rotate(90deg);
+}
+
+.sun div:nth-child(7) {
+    transform: rotate(-18deg);
+}
+
+.sun div:nth-child(8) {
+    transform: rotate(-36deg);
+}
+
+.sun div:nth-child(9) {
+    transform: rotate(-54deg);
+}
+
+.sun div:nth-child(10) {
+    transform: rotate(-72deg);
+}
+
+/* MOON */
+
+.moon {
+    position: absolute;
+    top: 30px;
+    right: 50%;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    box-shadow: 15px 15px 0 0 #ffdf05;
+    animation: moonRotate 50s linear infinite;
+}
+
+@keyframes moonRotate {
+    0% {
+        transform: rotate(60deg);
+    }
+    100% {
+        transform: rotate(400deg);
+    }
+}
+
+/* moon orbit */
+.moon-wrapper {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    transform-origin: bottom center;
+    animation: moonNight 50s linear infinite;
+}
+
+@keyframes moonNight {
+    0% {
+        transform: rotate(270deg);
+    }
+    100% {
+        transform: rotate(-90deg);
+    }
+}
+
+/* stars */
+.star {
+    visibility: hidden;
+    position: absolute;
+    top: 50px;
+    left: 250px;
+    width: 3px;
+    height: 3px;
+    margin: 0 auto;
+    border-radius: 50%;
+    background: #ffcf11;
+    box-shadow: 0px 0px 10px 2px #ffdf05;
+}
+
+.polarStar {
+    visibility: hidden;
+    position: absolute;
+    top: 35px;
+    left: 440px;
+    height: 4px;
+    width: 4px;
+    border-radius: 50%;
+    margin: 0 auto;
+    background-color: orange;
+    box-shadow: 0px 0px 10px 2px orange;
+    animation: twinkleStar 50s linear infinite;
+}
+  /* animation: name duration timing-function delay iteration-count direction fill-mode; */
+
+  /* TODO more twinkle  */
+@keyframes twinkleStar {
+    0%, 2% {
+        visibility: visible;
+        transform: scale(1);
+    }
+    3%, 50% {
+        visibility: hidden;
+        height: 0px;
+        width: 0px;
+    }
+    51%, 53% {
+        height: 3px;
+        width: 3px;
+        transform: scale(1);
+        visibility: visible;
+    }
+    54%, 56% {
+        transform: scale(0.5);
+        visibility: visible;
+    }
+    57%, 60% {
+        transform: scale(1);
+        visibility: visible;
+    }
+    61%, 90% {
+        transform: scale(0.5);
+        visibility: visible;
+    }
+    100% {
+        transform: scale(1);
+        visibility: visible;
+    }
+}
+
+/* TODO besser teil in box-shadow  */
+.shootingStar {
+    visibility: hidden;
+    position: absolute;
+    height: 4px;
+    width: 4px;
+    border-radius: 50%;
+    margin: 0 auto;
+    background-color: yellow;
+    box-shadow: 4px -4px 2px 1px gold, 7px -7px 5px 2px #ffdf05, 12px -12px 6px 3px #ffdf05, 16px -16px 8px 2px #ffdf05;
+    animation: shootingStar 50s linear infinite;
+}
+
+@keyframes shootingStar {
+    0%, 86% {
+        visibility: hidden;
+    }
+    87% {
+        visibility: visible;
+        top: -10px;
+        left: 400px;
+    }
+    95%, 100% {
+        left: -10px;
+        top: 340px;
+        visibility: hidden;
+    }
+}
+
+.star-1 {
+    top: 70px;
+    left: 54px;
+    animation: twinkleStar1 50s linear infinite;
+}
+
+/* TODO more twinkle  */
+@keyframes twinkleStar1 {
+    0%, 4% {
+        visibility: visible;
+        transform: scale(0.9);
+    }
+    5%, 46% {
+        visibility: hidden;
+        height: 0px;
+        width: 0px;
+    }
+    47%, 53% {
+        height: 3px;
+        width: 3px;
+        transform: scale(1);
+        visibility: visible;
+    }
+    54%, 56% {
+        transform: scale(0.9);
+        visibility: visible;
+    }
+    57%, 60% {
+        transform: scale(1);
+        visibility: visible;
+    }
+    61%, 90% {
+        transform: scale(0.8);
+        visibility: visible;
+    }
+    100% {
+        transform: scale(0.9);
+        visibility: visible;
+    }
+}
+
+.star-2 {
+    top: 54px;
+    left: 126px;
+    animation: twinkleStar2 50s linear infinite;
+}
+
+@keyframes twinkleStar2 {
+    0%, 3% {
+        visibility: visible;
+        transform: scale(1);
+    }
+    4%, 49% {
+        visibility: hidden;
+        height: 0px;
+        width: 0px;
+    }
+    50%, 53% {
+        height: 3px;
+        width: 3px;
+        transform: scale(1);
+        visibility: visible;
+    }
+    54%, 56% {
+        transform: scale(0.9);
+        visibility: visible;
+    }
+    57%, 60% {
+        transform: scale(1);
+        visibility: visible;
+    }
+    61%, 90% {
+        transform: scale(0.9);
+        visibility: visible;
+    }
+    100% {
+        transform: scale(1);
+        visibility: visible;
+    }
+}
+
+.star-3 {
+    top: 88px;
+    left: 196px;
+    animation: twinkleStar3 50s linear infinite;
+}
+
+@keyframes twinkleStar3 {
+    0%, 3% {
+        visibility: visible;
+        transform: scale(1);
+    }
+    4%, 47% {
+        visibility: hidden;
+        height: 0px;
+        width: 0px;
+    }
+    48%, 53% {
+        height: 3px;
+        width: 3px;
+        transform: scale(1);
+        visibility: visible;
+    }
+    54%, 56% {
+        transform: scale(0.9);
+        visibility: visible;
+    }
+    57%, 60% {
+        transform: scale(1);
+        visibility: visible;
+    }
+    61%, 90% {
+        transform: scale(0.9);
+        visibility: visible;
+    }
+    100% {
+        transform: scale(1);
+        visibility: visible;
+    }
+}
+
+.star-4 {
+    top: 120px;
+    left: 265px;
+    animation: twinkleStar4 50s linear infinite;
+}
+
+@keyframes twinkleStar4 {
+    0%, 4% {
+        visibility: visible;
+        transform: scale(1);
+    }
+    5%, 48% {
+        visibility: hidden;
+        height: 0px;
+        width: 0px;
+    }
+    49%, 53% {
+        height: 3px;
+        width: 3px;
+        transform: scale(1);
+        visibility: visible;
+    }
+    54%, 56% {
+        transform: scale(0.5);
+        visibility: visible;
+    }
+    57%, 60% {
+        transform: scale(1);
+        visibility: visible;
+    }
+    61%, 90% {
+        transform: scale(0.5);
+        visibility: visible;
+    }
+    100% {
+        transform: scale(1);
+        visibility: visible;
+    }
+}
+
+.star-5 {
+    top: 180px;
+    left: 280px;
+    animation: twinkleStar5 50s linear infinite;
+}
+
+@keyframes twinkleStar5 {
+    0%, 3% {
+        visibility: visible;
+        transform: scale(1);
+    }
+    4%, 48% {
+        visibility: hidden;
+        height: 0px;
+        width: 0px;
+    }
+    49%, 53% {
+        height: 3px;
+        width: 3px;
+        transform: scale(1);
+        visibility: visible;
+    }
+    54%, 56% {
+        transform: scale(0.5);
+        visibility: visible;
+    }
+    57%, 60% {
+        transform: scale(1);
+        visibility: visible;
+    }
+    61%, 90% {
+        transform: scale(0.5);
+        visibility: visible;
+    }
+    100% {
+        transform: scale(1);
+        visibility: visible;
+    }
+}
+
+.star-6 {
+    top: 190px;
+    left: 380px;
+    animation: twinkleStar6 50s linear infinite;
+}
+
+@keyframes twinkleStar6 {
+    0%, 3% {
+        visibility: visible;
+        transform: scale(1);
+    }
+    4%, 49% {
+        visibility: hidden;
+        height: 0px;
+        width: 0px;
+    }
+    50%, 53% {
+        height: 3px;
+        width: 3px;
+        transform: scale(1);
+        visibility: visible;
+    }
+    54%, 56% {
+        transform: scale(0.5);
+        visibility: visible;
+    }
+    57%, 60% {
+        transform: scale(1);
+        visibility: visible;
+    }
+    61%, 90% {
+        transform: scale(0.5);
+        visibility: visible;
+    }
+    100% {
+        transform: scale(1);
+        visibility: visible;
+    }
+}
+
+.star-7 {
+    top: 130px;
+    left: 400px;
+    animation: twinkleStar7 50s linear infinite;
+}
+
+@keyframes twinkleStar7 {
+    0%, 4% {
+        visibility: visible;
+        transform: scale(1);
+    }
+    5%, 48% {
+        visibility: hidden;
+        height: 0px;
+        width: 0px;
+    }
+    49%, 53% {
+        height: 3px;
+        width: 3px;
+        transform: scale(1);
+        visibility: visible;
+    }
+    54%, 56% {
+        transform: scale(0.9);
+        visibility: visible;
+    }
+    57%, 60% {
+        transform: scale(1);
+        visibility: visible;
+    }
+    61%, 90% {
+        transform: scale(0.9);
+        visibility: visible;
+    }
+    100% {
+        transform: scale(1);
+        visibility: visible;
+    }
+}
+
+/* CLOUDS */
+/* TODO more differenc in form, color und formsbevegung */
+.cloud {
+    position: absolute;
+    left: -200px;
+    width: 200px;
+    height: 60px;
+    border-radius: 200px;
+    background: #fff;
+    animation: _grundCloud 50s infinite;
+}
+
+@keyframes grundCloud {
+    0%, 50% {
+        opacity: 0.9;
+    }
+    51%, 80% {
+        opacity: 0.7;
+        background: #DCDCDC;
+    }
+    100% {
+        opacity: 0.9;
+        background: #fff;
+    }
+}
+
+.cloud:before,
+.cloud:after {
+    position: absolute;
+    top: -15px;
+    left: 10px;
+    width: 100px;
+    height: 90px;
+    content: '';
+    border-radius: 100px;
+    background: #fff;
+    animation: _rundCloud 50s infinite;
+}
+
+@keyframes rundCloud {
+    0%, 45% {
+        background: #fff;
+    }
+    50%, 100% {
+        background: #DCDCDC;
+    }
+}
+
+.cloud:after {
+    top: -50px;
+    right: 15px;
+    left: auto;
+    width: 120px;
+    height: 120px;
+    animation: _rundCloud 50s infinite;
+}
+
+/* small cloud*/
+
+.cloud-1 {
+    top: 10px;
+    animation: runCloud1 190s linear infinite;
+}
+
+@keyframes runCloud1 {
+    0% {
+        transform: scale(0.2) rotateY(180deg);
+    }
+    100% {
+        
+        transform: translateX(700px) scale(0.2) rotateY(180deg);
+    }
+}
+
+.cloud-2 {
+    top: 50px;
+    animation: runCloud2 90s linear infinite;
+}
+
+@keyframes runCloud2 {
+    0% {
+        transform: scale(0.4);
+    }
+    100% {
+        
+        transform: translateX(700px) scale(0.4);
+    }
+}
+
+.cloud-3 {
+    top: 100px;
+    animation: runCloud3 140s linear infinite;
+}
+
+@keyframes runCloud3 {
+    0% {
+        transform: scale(0.5) rotateY(180deg);
+    }
+    100% {
+        
+        transform: translateX(700px) scale(0.5) rotateY(180deg);
+    }
+}
+
+/* big cloud*/
+.cloud-4 {
+    top: 170px;
+    left: -200px;
+    width: 150px;
+    height: 55px;
+    border-radius: 160px;
+    animation: runCloud4 40s linear infinite;
+}
+
+.cloud-4:after {
+    top: -37px;
+    right: 8px;
+    left: auto;
+    width: 80px;
+    height: 100px;
+}
+
+@keyframes runCloud4 {
+    0% {
+        transform: scale(0.6);
+    }
+    100% {
+        
+        transform: translateX(700px) scale(0.6);
+    }
+}
+
+.sea {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    height: 40px;
+    opacity: .8;
+    background: #2a94d6;
+    animation: daySea 50s linear infinite;
+}
+
+@keyframes daySea {
+    0%, 1% {
+        /* Night 2s*/
+        background-color: #125179;
+    }
+    10% {
+        /* Morgen 5s */
+        background-color: #2a94d6;
+    }
+    20%, 30% {
+        /* Afternoon 20s */
+        background-color: #2a94d6;
+    }
+    48% {
+        /* Evening 5s */
+        background-color: #2a94d6;
+    }
+    57%, 100% {
+        /* Night 18s */
+        background-color: #125179;
+    }
+}
+
+.sea::after {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    height: 10px;
+    content: '';
+    background: #1d7fbb;
+}
