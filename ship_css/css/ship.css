@@ -1,11 +1,12 @@
-html {
-    background-color: chocolate;
+/*  SHIP */
+.container .jumbotron {
+    box-shadow: 0 0 50px #033E6B;
+    border: 2px solid #033E6B;
 }
 
 /* TODO: fullscreen mode */
 .canvas {
     position: relative;
-    margin-top: 20px;
     width: 500px;
     margin: auto;
     transition: .3s ease;
@@ -20,59 +21,6 @@ html {
     background: skyblue;
     box-shadow: 0 -400px 300px -300px steelblue inset;
     animation: daySky 50s linear infinite;
-}
-
-/* MENU */
-ul {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-    border-radius: 9px;
-    border: 0;
-}
-  
-li a {
-    display: block;
-    padding: 1px 5px 1px 5px;
-    margin-top: 2px;
-    color: #A62F00;
-    font-size: 80%;
-    text-decoration: none;
-    background-color: #66A3D2;
-    border-radius: 9px;
-    border: 0;
-}
-
-/* Change the link color on hover */
-li a:hover {
-    background-color: #033E6B;
-    color: white;
-}
-
-.go_MENU {
-    animation: 
-    go-DATA 2s linear forwards,
-    blink-DATA .5s linear forwards;
-}
-
-@keyframes go-DATA {
-    0%, 60% {
-        opacity: 0;
-    }
-    70%, 90% {
-        opacity: 0.5;
-    }
-    100% {
-        opacity: 0.9;
-    }
-}
-
-.cell {
-    position: relative;
-}
-
-.line1 {
-    display: inline-block;
 }
 
 .title {
@@ -220,7 +168,7 @@ li a:hover {
 
 .ship_Name {
     position: absolute;
-    bottom: 0;
+    bottom: 5px;
     left: 0;
     width: 100px;
     height: 20px;
@@ -254,9 +202,9 @@ li a:hover {
     position: absolute;
     bottom: 6px;
     right: 10px;
-    height: 8px;
-    width: 8px;
-    border: 6px ridge red;
+    height: 20px;
+    width: 20px;
+    border: 8px ridge red;
     border-radius: 50%;
 }
 
@@ -361,7 +309,7 @@ li a:hover {
     top: -20px;
     left: 50%;
     width: 2px;
-    height: 100px;
+    height: 120px; /*100*/
     margin-left: -1px;
     border: solid #ffcf11;
     border-width: 10px 0 10px 0;

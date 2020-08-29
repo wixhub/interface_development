@@ -1,18 +1,16 @@
+/*** Time counter ***/
 
 /************CSS Calss Style**************/
 
 section {
-  width: 500px;
+  width: 98%;
   margin: auto;
   padding-top: 20px;
   font-family: 'roboto', sans-serif;
 }
 
-input[type="radio"] { display: none; }
-
 .time_counter { 
-    text-align: center; 
-    
+    text-align: center;
 }
 
 .time_counter .cell {
@@ -22,35 +20,6 @@ input[type="radio"] { display: none; }
   overflow: hidden;
   display: inline-block;
 }
-
-
-
-.control {
-  text-align: center;
-  margin-top: 30px;
-}
-
-.control label {
-  border: 1px solid;
-  font-size: 24px;
-  font-weight: 600;
-  padding: 10px;
-  margin: 0 10px;
-  display: inline-block;
-  cursor: pointer;
-  width: 83px;
-  letter-spacing: 1px;
-  transition: all 1s ease-in-out;
-}
-
-.control label[for="start"] { 
-    
-    color: #3DA23A; 
-}
-
-.control label[for="stop"] { color: #CC181E; }
-
-.control label[for="reset"] { color: #5FD3F0; }
 
 /************CSS Calss Animation**************/
 
@@ -68,37 +37,37 @@ input[type="radio"] { display: none; }
   -o-animation-iteration-count: infinite;
   animation-iteration-count: infinite;
 }
-@-webkit-keyframes 
-ten {  0% {
-margin-top: 0;
+@-webkit-keyframes ten {  
+  0% {
+    margin-top: 0;
+  }
+  100% {
+    margin-top: -350px;
+  }
 }
- 100% {
-margin-top: -350px;
+@-moz-keyframes ten {  
+  0% {
+    margin-top: 0;
+  }
+  100% {
+    margin-top: -350px;
+  }
 }
+@-o-keyframes ten {  
+  0% {
+    margin-top: 0;
+  }
+  100% {
+    margin-top: -350px;
+  }
 }
-@-moz-keyframes 
-ten {  0% {
-margin-top: 0;
-}
- 100% {
-margin-top: -350px;
-}
-}
-@-o-keyframes 
-ten {  0% {
-margin-top: 0;
-}
- 100% {
-margin-top: -350px;
-}
-}
-@keyframes 
-ten {  0% {
-margin-top: 0;
-}
- 100% {
-margin-top: -350px;
-}
+@keyframes ten {  
+  0% {
+    margin-top: 0;
+  }
+  100% {
+    margin-top: -350px;
+  }
 }
 
 .six {
@@ -115,37 +84,37 @@ margin-top: -350px;
   -o-animation-iteration-count: infinite;
   animation-iteration-count: infinite;
 }
-@-webkit-keyframes 
-six {  0% {
-margin-top: 0;
+@-webkit-keyframes six {  
+  0% {
+    margin-top: 0;
+  }
+  100% {
+    margin-top: -210px;
+  }
 }
- 100% {
-margin-top: -210px;
+@-moz-keyframes six {  
+  0% {
+    margin-top: 0;
+  }
+  100% {
+    margin-top: -210px;
+  }
 }
+@-o-keyframes six {  
+  0% {
+    margin-top: 0;
+  }
+  100% {
+    margin-top: -210px;
+  }
 }
-@-moz-keyframes 
-six {  0% {
-margin-top: 0;
-}
- 100% {
-margin-top: -210px;
-}
-}
-@-o-keyframes 
-six {  0% {
-margin-top: 0;
-}
- 100% {
-margin-top: -210px;
-}
-}
-@keyframes 
-six {  0% {
-margin-top: 0;
-}
- 100% {
-margin-top: -210px;
-}
+@keyframes six {  
+  0% {
+    margin-top: 0;
+  }
+  100% {
+    margin-top: -210px;
+  }
 }
 
 .mill {
@@ -263,3 +232,4 @@ margin-top: -210px;
   -o-animation: none;
   animation: none;
 }
+/* END Time counter */
