@@ -147,7 +147,7 @@ body {
     }
 
     #collapsable-nav a { /* Collapsed nav menu text */
-        font-size: 1.2em;
+        font-size: 1.5em;
     }
     #collapsable-nav a span { /* Collapsed nav menu glyph */
         font-size: 1em;
@@ -209,7 +209,7 @@ body {
         text-align: center;
     }
     .menu-item-description {
-        text-align: center;;
+        text-align: center;
     }
 }
 
