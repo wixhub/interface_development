@@ -1,10 +1,20 @@
+* {
+    box-sizing: border-box;
+}
+
 html {
-    background-color: chocolate;
+    height: 100%;
 }
 body {
-    font-size: 16px;
-    color: #fff;
-    font-family: 'Oxygen', sans-serif;
+    font-size: 100%;
+    color: #065592;
+    font-family:  'Helvetica', 'Arial', sans-serif;
+}
+
+.container {
+    margin-left: auto;
+    margin-right: auto;
+    padding: 15px;
 }
 
 /** HEADER **/
@@ -19,11 +29,11 @@ body {
 }
 .navbar-brand h1 { /* Animation name */
     font-family: 'Lora', serif;
-    color: #557c3e;
+    color: #033E6B;
     font-size: 1.5em;
     text-transform: uppercase;
     font-weight: bold;
-    text-shadow: 1px 1px 1px #222;
+    text-shadow: 1px 1px 1px #50adf3;
     margin-top: 0;
     margin-bottom: 0;
     line-height: .75;
@@ -32,10 +42,10 @@ body {
     text-decoration: none;
 }
 .navbar-brand p {
-    color: #000;
+    color: #307cb6;
     text-transform: uppercase;
     font-size: .7em;
-    margin-top: 15px;
+    margin-top: 7px;
 }
 .navbar-brand p span {
     vertical-align: middle;
@@ -55,6 +65,19 @@ body {
     font-size: 1.8em;
 }
 
+#contact {
+    margin: 0px;
+    padding: 15px;
+}
+#contact a {
+    text-align: right;
+    padding-bottom: 0;
+}
+#contact div {
+    color: #00BD39;
+    text-align: right;
+}
+
 .navbar-header button.navbar-toggle, .navbar-header .icon-bar {
     border: 1px solid #61122f;
 }
@@ -63,6 +86,13 @@ body {
     margin-top: -30px;
 }
 /* END HEADER */
+
+.container .jumbotron {
+    box-shadow: 0 0 50px #033E6B;
+    border: 2px solid #033E6B;
+    width: 620px;
+    margin: auto;
+}
 
 /*** FOOTER ***/
 .panel-footer {
@@ -97,7 +127,7 @@ body {
 /********** Large devices only **********/
 @media (min-width: 1200px) {
     .container .jumbotron {
-        /*height: 675px;*/
+        height: 100%;
     }
 }
 
@@ -113,7 +143,7 @@ body {
 
     /* Home Page */
     .container .jumbotron {
-        /*height: 558px;*/
+        height: 100%;
     }
     /* End Home Page */
 }
@@ -122,7 +152,7 @@ body {
 @media (min-width: 768px) and (max-width: 991px) {
     /* Home Page */
     .container .jumbotron {
-        /*height: 432px;*/
+        height: 100%;
     }
     /* End Home Page */
 }
@@ -154,7 +184,7 @@ body {
         margin-right: 5px;
     }
 
-    #call-btn > a {
+    #contact-btn > a {
         font-size: 1.5em;
         display: block;
         margin: 0 20px;
@@ -163,7 +193,7 @@ body {
         background-color: #f6b319;
         color: #951c49;
     }
-    #xs-deliver {
+    #xs-contact {
         margin-top: 5px;
         font-size: .7em;
         letter-spacing: .1em;
@@ -194,8 +224,7 @@ body {
     /* Home Page */
     .container .jumbotron {
         margin-top: 30px;
-        padding: 0;
-        overflow: scroll;
+        padding: 10px;
     }
     #menu-tile, #specials-tile {
         width: 360px;
