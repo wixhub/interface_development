@@ -8,7 +8,7 @@ function setCurrentBoxWidth () {
     let curBoxWidth = 510;
     if (curWinWidth < 479) {
         curBoxWidth = curWinWidth - 50;
-        curJumbotronWidth = curBoxWidth + 25;alert(curWinWidth);
+        curJumbotronWidth = curBoxWidth + 25;
     }
     document.getElementsByClassName("jumbotron")[0].style.width = curJumbotronWidth + "px";
     //document.getElementsByClassName("canvas")[0].style.width = curBoxWidth;
