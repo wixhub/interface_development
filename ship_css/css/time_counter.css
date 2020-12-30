@@ -205,8 +205,8 @@ section {
 }
 
 .time_counter .cell .num {
-  font-size: 35px;
-  line-height: 35px;
+  font-size: 25px;
+  line-height: 25px;
   color: #444;
   display: block;
   -webkit-animation-play-state: running;
@@ -216,8 +216,8 @@ section {
 }
 
 .time_counter .cell .num {
-  font-size: 35px;
-  line-height: 35px;
+  font-size: 25px;
+  line-height: 25px;
   color: #444;
   display: block;
   -webkit-animation-play-state: running;

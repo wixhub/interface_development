@@ -16,7 +16,6 @@
     <title>Animation @Ship</title>
     <link rel="stylesheet" href="../css/bootstrap.min.css">
     <link rel="stylesheet" href="css/styles.css">
-    <link rel="stylesheet" href="css/time_counter.css">
     <link rel="stylesheet" href="css/ship.css">
     <link href='https://fonts.googleapis.com/css?family=Oxygen:400,300,700' rel='stylesheet' type='text/css'>
     <link href='https://fonts.googleapis.com/css?family=Lora' rel='stylesheet' type='text/css'>
@@ -45,16 +44,12 @@
         
         <div id="collapsable-nav" class="collapse navbar-collapse">
           <ul id="nav-list" class="nav navbar-nav navbar-right">
-            <li class="visible-xs active">
-              <a href="https://wixhub.github.io/index.html#JS">
+            <li>
+              <a href="https://wixhub.github.io/index.html#JS" target="_blank">
                 <span class="glyphicon glyphicon-cloud"></span><br class="hidden-xs"><span> Animation list</span></a>
             </li>
-            <li class="hidden-xs">
-              <a href="https://wixhub.github.io/index.html#JS">
-                <span class="glyphicon glyphicon-cloud"></span><br class="hidden-xs"><span> Animation list</span></a>
-            </li>
-            <li class="hidden-xs">
-              <a href="https://wixhub.github.io/">
+            <li>
+              <a href="https://wixhub.github.io/" target="_blank">
                 <span class="glyphicon glyphicon-send"></span><br class="hidden-xs"><span> Contact Card</span></a>
             </li>
           </ul><!-- #nav-list -->
@@ -62,13 +57,6 @@
       </div><!-- .container -->
     </nav><!-- #header-nav -->
   </header>
-
-  <div id="contact-btn" class="visible-xs">
-    <a class="btn" href="https://wixhub.github.io/">
-    <span class="glyphicon glyphicon-send"></span>
-    Contact Card
-    </a>
-  </div>
 
   <div id="main-content" class="container">
     <div class="jumbotron">
@@ -136,26 +124,11 @@
 
   <footer class="panel-footer">
     <div class="container">
-      <div class="text-center"><h4>Cartoon cycle 50s</h4></div>
-        <div class="row">
-          <div id="hours" class="col-lg-12 col-md-12 col-sm-12 col-xs-12 container">
-            <hr class="visible-xs">
-            <div class="time_counter">
-              <div class="cell"> <span class="num six ten_minu">0 1 2 3 4 5</span> </div>
-              <div class="cell"> <span class="num ten minu">0 1 2 3 4 5 6 7 8 9</span> </div>
-              <div class="cell"> <span class="num">:</span> </div>
-              <div class="cell"> <span class="num six ten_sec">0 1 2 3 4 5</span> </div>
-              <div class="cell"> <span class="num ten sec">0 1 2 3 4 5 6 7 8 9</span> </div>
-              <div class="cell"> <span class="num">:</span> </div>
-              <div class="cell"> <span class="num ten hund_mill">0 1 2 3 4 5 6 7 8 9</span> </div>
-              <div class="cell"> <span class="num ten ten_mill">0 1 2 3 4 5 6 7 8 9</span> </div>
-              <div class="cell"> <span class="num ten mill">0 1 2 3 4 5 6 7 8 9</span> </div>
-            </div>
-            <hr class="visible-xs">
-          </div>
-        </div>
-      </div><!-- End of row -->
-      <div class="text-center"><h5>&copy; Copyright Jana Semenova 2020</h5></div>
+      <hr class="visible-xs">
+      <div class="text-center"><h4><div id='seconds-counter'> </div></h4></div>
+      <div class="text-center"><h5>Cartoon cycle 50s</h5></div>
+      <hr class="visible-xs">
+      <div class="text-center"><h6>© Jana Semenova 2020</h6></div>
     </div><!-- End of container -->
   </footer>
 

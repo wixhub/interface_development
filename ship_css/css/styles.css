@@ -44,7 +44,7 @@ body {
 .navbar-brand p {
     color: #307cb6;
     text-transform: uppercase;
-    font-size: .7em;
+    font-size: .6em;
     margin-top: 7px;
 }
 .navbar-brand p span {
@@ -90,32 +90,19 @@ body {
 .container .jumbotron {
     box-shadow: 0 0 50px #033E6B;
     border: 2px solid #033E6B;
-    width: 620px;
+    width: 630px;
     margin: auto;
 }
 
 /*** FOOTER ***/
 .panel-footer {
     margin-top: 10px;
-    padding-top: 35px;
-    padding-bottom: 30px;
+    padding-top: 5px;
+    padding-bottom: 5px;
     background-color: #f6b319;
     border-top: 0;
 }
-.panel-footer div.row {
-    margin-bottom: 35px;
-}
-#hours, #address {
-    line-height: 2;
-}
-#hours > span, #address > span {
-    font-size: 1.3em;
-}
-#address p {
-    color: #557c3e;
-    font-size: .8em;
-    line-height: 1.8;
-    }
+
 #testimonials {
     font-style: italic;
 }
@@ -126,54 +113,61 @@ body {
 
 /********** Large devices only **********/
 @media (min-width: 1200px) {
+
+    /* content */
     .container .jumbotron {
         height: 100%;
     }
+    .box_front {
+        /* width: 510px; */
+        height: 390px;
+    }
+    /* End content */
 }
 
 /********** Medium devices only **********/
 @media (min-width: 992px) and (max-width: 1199px) {
-    /* Header */
-    #logo-img {
-        /*width: 100px;*/
-        /*height: 100px;*/
-        margin: 5px 5px 5px 0;
-    }
-    /* End Header */
 
-    /* Home Page */
+    /* content */
     .container .jumbotron {
         height: 100%;
     }
-    /* End Home Page */
+    .box_front {
+        /* width: 510px; */
+        height: 390px;
+    }
+    /* End content */
 }
 
 /********** Small devices only **********/
 @media (min-width: 768px) and (max-width: 991px) {
-    /* Home Page */
+
+    /* content */
     .container .jumbotron {
         height: 100%;
     }
-    /* End Home Page */
+    .box_front {
+        /* width: 510px; */
+        height: 390px;
+    }
+    /* End content */
 }
 
 /********** Extra small devices only **********/
 @media (max-width: 767px) {
+
     /* Header */
     .navbar-brand {
         padding-top: 10px;
         height: 80px;
     }
-    .navbar-brand h1 { /* Restaurant name */
+    .navbar-brand h1 { /* Animation name */
         padding-top: 10px;
-        font-size: 5vw; /* 1vw = 1% of viewport width */
+        font-size: 4vw; /* 1vw = 1% of viewport width */
     }
-    .navbar-brand p { /* Kosher cert */
-        font-size: .6em;
+    .navbar-brand p { /* Source*/
+        font-size: .5em;
         margin-top: 12px;
-    }
-    .navbar-brand p img { /* Star-K */
-        height: 20px;
     }
 
     #collapsable-nav a { /* Collapsed nav menu text */
@@ -202,61 +196,43 @@ body {
     /* End Header */
 
     /* Footer */
-    .panel-footer section {
-        margin-bottom: 30px;
-        text-align: center;
-    }
-    .panel-footer section:nth-child(3) {
-        margin-bottom: 0; /* margin already exists on the whole row */
-    }
     .panel-footer section hr {
         width: 50%;
     }
 
-    .time_counter .cell .ten_mill{
-        
-    }
-    .time_counter .cell .mill{
+    .xs-hidden {
         visibility: hidden;
     }
     /* End Footer */
 
-    /* Home Page */
-    .container .jumbotron {
-        margin-top: 30px;
-        padding: 10px;
-    }
-    #menu-tile, #specials-tile {
-        width: 360px;
-        margin: 0 auto 15px;
-    }
-
-    .menu-item-photo {
-        margin-right: auto;
-    }
-    .menu-item-tile .menu-item-price {
-        text-align: center;
-    }
-    .menu-item-description {
-        text-align: center;
-    }
+    /* content */
+    
+    /* End content */
 }
 
-/********** Super extra small devices Only :-) (e.g., iPhone 4) **********/
+/********** Super extra small devices only (e.g., iPhone 4) **********/
 @media (max-width: 479px) {
+
     /* Header */
-    .navbar-brand h1 { /* Restaurant name */
+    .navbar-brand h1 { /* Animation name */
         padding-top: 5px;
-        font-size: 6vw;
+        font-size: 5vw;
+    }
+    .navbar-brand p { /* Source*/
+        font-size: .3em;
+        margin-top: 7px;
     }
     /* End Header */
 
-    /* Home page */
-    #menu-tile, #specials-tile {
-        width: 280px;
-        margin: 0 auto 15px;
+    /* content */
+    .container .jumbotron {
+        /* width: 425px; */
+        padding: 10px;
     }
-
+    .box_front {
+        /* width: 400px; */
+        height: 400px;
+    }
     .col-xxs-12 {
         position: relative;
         min-height: 1px;
@@ -265,4 +241,5 @@ body {
         float: left;
         width: 100%;
     }
+    /* End content */
 }

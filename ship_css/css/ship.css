@@ -3,7 +3,7 @@
 /* TODO: fullscreen mode */
 .canvas {
     position: relative;
-    width: 500px;
+    
     margin: auto;
     transition: .3s ease;
     perspective: 800px;
@@ -12,8 +12,8 @@
 .box_front {
     position: relative;
     overflow: hidden;
-    width: 500px;
-    height: 380px;
+    /* width: 500px;
+    height: 380px; */
     background: skyblue;
     box-shadow: 0 -400px 300px -300px steelblue inset;
     animation: daySky 50s linear infinite;
@@ -164,10 +164,11 @@
 
 .ship_Name {
     position: absolute;
-    bottom: 5px;
+    bottom: 1px;
     left: 0;
     width: 100px;
     height: 20px;
+    font-size: 1em;
     font-family: "Times New Roman", Times, serif;
     color: #fff;
     animation: runShipName 50s linear infinite;
