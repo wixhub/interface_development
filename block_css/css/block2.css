@@ -1,0 +1,37 @@
+.canva2 {
+    border-style: dotted;
+    border-color: rgb(197, 37, 37);
+    border-width: 1px;
+    width: 350px;
+    height: 302px;
+    margin: auto;
+    padding: auto;
+}
+
+.static {
+ 	width: 150px;
+    height: 150px;
+    background: rgb(39, 24, 24);
+    position: relative;
+    left: 100px;
+    top: 50px;
+	opacity: 0.10;
+}
+
+.moving {
+    width: 150px;
+    height: 150px;
+    background: #46d839;
+    opacity: 0.50;
+    top: 0px;
+    position: relative;
+    animation: moving-block2 5s alternate;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+}
+@keyframes moving-block2 {
+    from {left: 0px;}
+    to {left: 200px;}
+}
+
+    
