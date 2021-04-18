@@ -1,25 +1,20 @@
-.jumbotron {
-    width: 100%;
-    border-radius: 1em;
-    padding: auto;
-    background-color: #fcbe2d;
-}
-
-.canva {
+.canva1 {
     border-style: dashed;
     border-color: #111;
-    border-width: 1px;
+    border-width: 2px;
     width: 250px;
     height: 300px;
     margin: auto;
     padding: auto;
 }
 
-.animation {
+.animation1 {
     height: 150px;
     width: 150px;
     background-color:#f00;
-    
+    padding-top: 20px;
+    text-align: center;
+    font-size: large;
     /* название анимации */
     animation-name: moveSquare; 
     /* продолжительность анимации */
@@ -39,19 +34,30 @@
 
     0% { transform: none;}
 
-    25%{transform:translateX(100px)}
+    25%{transform:translateX(96px)}
     
-    50%{transform:translate(100px,150px);}
+    50%{transform:translate(96px,146px);
+        border-radius: 0%;
+    }
     
-    75%, 100% {transform:translate(100px,150px) scale(2) rotate(145deg);}
-    
+    70% {
+        transform:translate(96px,146px) scale(2) rotate(145deg);
+        border-radius: 20%;
+    }
+    90% {
+        border-radius: 50%;
+        transform:translate(96px,146px) scale(1) rotate(360deg);
+    }
+    100% {
+        border-radius: 50%;
+        transform:translate(96px,146px) scale(1) rotate(360deg);
+    }
 }
 
-.animation:hover {
+.animation1:hover {
     
     background-color:#FFFF00 ;
 
     transition: background-color 500ms linear; 
 
 }
-

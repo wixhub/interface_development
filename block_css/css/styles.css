@@ -16,11 +16,31 @@ body {
     padding: 15px;
 }
 
+.color-set {
+    background: linear-gradient(
+        217deg,
+        rgba(255, 0, 0, 0.8),
+        rgba(255, 0, 0, 0) 70.71%
+      ),
+      linear-gradient(127deg, rgba(0, 255, 0, 0.8), rgba(0, 255, 0, 0) 70.71%),
+      linear-gradient(336deg, rgba(0, 0, 255, 0.8), rgba(0, 0, 255, 0) 70.71%);
+    background-repeat: no-repeat;
+    overflow: hidden;
+}
+
+.contain {
+    padding-bottom: 60px;
+}
+
 /** HEADER **/
 #header-nav {
     background-color: #f6b319;
     border-radius: 0;
     border: 0;
+}
+
+.navbar {
+    margin-bottom: 0px;
 }
 
 .navbar-brand {
@@ -74,17 +94,14 @@ body {
 /* END HEADER */
 
 /*** FOOTER ***/
-footer  {
-    width: 100%;
-    position: absolute;
-    bottom: 0;
-}
+
 .panel-footer {
-    margin-top: 10px;
-    padding-top: 35px;
-    padding-bottom: 30px;
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
     background-color: #f6b319;
-    border-top: 0;
+    border: 0px;
 }
 .panel-footer div.row {
     margin-bottom: 35px;
@@ -95,21 +112,11 @@ footer  {
 /********** Large devices only **********/
 @media (min-width: 1200px) {
 
-    footer  {
-        width: 100%;
-        position: absolute;
-        bottom: 0;
-    }
 }
 
 /********** Medium devices only **********/
 @media (min-width: 992px) and (max-width: 1199px) {
 
-    footer  {
-        width: 100%;
-        position: absolute;
-        bottom: 0;
-    }
 }
 
 /********** Small devices only **********/
@@ -161,6 +168,10 @@ footer  {
         margin-top: 30px;
         padding: 0;
     }
+
+    .col-sm-6 {
+        margin-bottom: 20px;
+    }
     /* end content */
 }
 
@@ -180,5 +191,10 @@ footer  {
         padding-left: 15px;
         float: left;
         width: 100%;
+        margin-bottom: 20px;
+    }
+
+    .col-xs-12 {
+        margin-bottom: 20px;
     }
 }

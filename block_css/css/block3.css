@@ -1,0 +1,37 @@
+.canva3 {
+    border-style: dashed;
+    border-color: rgb(180, 12, 12);
+    border-width: 2px;
+    width: 250px;
+    height: 250px;
+    margin: auto;
+    padding: auto;
+}
+
+.animation3 {
+    background: #6A1B9A;
+    width: 100px;
+    height: 100px;
+    position: relative;
+    left: 30%;
+    top: 30%;
+    text-align: center;
+    font-size: large;
+    animation: moving-block3 5s alternate;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+}
+
+@keyframes moving-block3 {
+    0%, 25% {
+        transform: scale(1) rotate3d(-1, 1, 0, 0deg);
+    }
+    50% {
+        border-radius: 0%;
+        transform: scale(0.4) rotate3d(-1, 1, 0, -90deg);
+    }
+    75%, 100% {
+        border-radius: 30%;
+        transform: scale(0.8) rotate3d(-1, 1, 0, -180deg);
+    }
+}
